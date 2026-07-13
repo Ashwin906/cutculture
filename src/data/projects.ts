@@ -15,7 +15,7 @@ export interface Project {
   duration: string;
 }
 
-export const driveThumb = (id: string) => `/api/thumb/${id}`;
+export const driveThumb = (id: string) => `https://drive.google.com/thumbnail?id=${id}&sz=w1600`;
 
 export const youtubeThumb = (id: string) =>
   `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
