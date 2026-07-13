@@ -76,11 +76,11 @@ export default function Hero({ onPlayReel }: { onPlayReel: () => void }) {
     >
       {/* letterbox bars */}
       <motion.div
-        className="fixed left-0 right-0 top-0 z-[80]"
+        className="fixed left-0 right-0 top-0 z-0 pointer-events-none"
         style={{ height: barH, background: "#000" }}
       />
       <motion.div
-        className="fixed bottom-0 left-0 right-0 z-[80]"
+        className="fixed bottom-0 left-0 right-0 z-0 pointer-events-none"
         style={{ height: barH, background: "#000" }}
       />
 
@@ -96,7 +96,7 @@ export default function Hero({ onPlayReel }: { onPlayReel: () => void }) {
       </div>
 
       {/* headline */}
-      <h1 className="display select-none text-[16.5vw] leading-[0.88] md:text-[13vw]">
+      <h1 className="display relative z-[90] select-none text-[16.5vw] leading-[0.88] md:text-[13vw]">
         <span className="block overflow-hidden">
           <motion.span className="block" variants={line} custom={0} initial="hidden" animate="show">
             CUT
