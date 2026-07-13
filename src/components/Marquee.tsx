@@ -31,7 +31,7 @@ export default function Marquee({
     // reverse travel direction when scrolling up
     if (f < -0.1) dirRef.current = reverse ? 1 : -1;
     else if (f > 0.1) dirRef.current = reverse ? -1 : 1;
-    let move = dirRef.current * 0.06 * delta * (1 + Math.abs(f));
+    let move = dirRef.current * 0.02 * delta * (1 + Math.abs(f));
     let next = baseX.get() + move;
     // wrap within one copy width (track holds 4 copies; wrap at -50%..0)
     if (next <= -50) next += 50;
